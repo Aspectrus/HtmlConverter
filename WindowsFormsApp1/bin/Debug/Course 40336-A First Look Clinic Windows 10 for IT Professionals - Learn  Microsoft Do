@@ -1,0 +1,144 @@
+				<div class="has-margin-top-medium summary is-size-body content"><p>This Microsoft First Look Clinic introduces IT Professionals to the new features and capabilities of Windows 10, using the Enterprise Edition of Windows 10. It also covers the key Windows 10 ecosystems of Identity Management, cloud services like Azure Active Directory (AAD), deployment/management tools, and the new User Interface. No topic is covered in depth, but students will finish the clinic with an understanding of the new features and capabilities of Windows 10 and related services and administration tools.</p>
+<h4 id="audience-profile">Audience profile</h4>
+<p>This clinic is intended for IT professionals who are interested in learning about the new features and functionality in Windows 10. In general, adopters of new technology or people looking to gain early insight into functionality of Windows 10 and related cloud services and tools will benefit from attending this First Look Clinic. People who are key technical influencers and technology decision-makers in an IT organization also may attend this clinic, as they can benefit from gaining early insight into some of the latest features and technologies that Windows 10 includes.</p>
+</div>
+				<div class="has-line-height-reset course-information has-margin-top-medium">
+					<div>
+						<p class="is-size-small"><strong>Job role:</strong>
+								<span>Developer</span>
+						</p>
+					</div>
+
+					<div class="related-exams">
+						<p class="is-size-small">
+							<strong>Features:</strong>
+							<span>none</span>
+						</p>
+					</div>
+
+					<div id="findALearningPartnerContainer" class="has-margin-top-medium">
+						<a href="https://www.microsoft.com/learning/partners.aspx" class="button is-primary" data-linktype="external">
+							<span>Find a learning partner</span>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-chevron-right-light"></span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="browseAllSessionsContainer" class="has-background-alternating-grey" hidden>
+	<div class="modular-content-container">
+		<div class="section is-small is-uniform">
+			<h2 class="has-margin-bottom-extra-small">
+				Browse All Sessions
+			</h2>
+			<div id="browseAllSessionsContent" class="content">
+
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div id="skillsGainedContainer" class="modular-content-container">
+		<div class="section is-small is-uniform has-padding-top-medium has-body-background-mobile">
+			<h3 class="title is-5">
+				Skills gained
+			</h3>
+			<div class="content has-line-height-reset">
+				<ul id="skills-gained">
+						<li class=" is-size-small">
+							List and explain the new features of Windows 10.
+						</li>
+						<li class=" is-size-small">
+							Understand those features that are available now and in what version.
+						</li>
+						<li class=" is-size-small">
+							Use and customize the new user interface in Windows 10
+						</li>
+						<li class="expandable is-size-small">
+							Describe the preparations required for deploying and managing Windows 10
+						</li>
+						<li class="expandable is-size-small">
+							Understand the Deployment Choices
+						</li>
+						<li class="expandable is-size-small">
+							Understand the Management Options
+						</li>
+						<li class="expandable is-size-small">
+							Understand the overall security features of Windows 10
+						</li>
+						<li class="expandable is-size-small">
+							List the features of Device Guard
+						</li>
+						<li class="expandable is-size-small">
+							Understand a methodology to deploy Device Guard
+						</li>
+				</ul>
+			</div>
+			<button class="button is-text has-text-primary" aria-controls="skills-gained" data-show-more><span class="show-more-text">Show more</span><span class="icon" aria-hidden="true"><span class="expanded-indicator docon docon-chevron-down-light"></span></span></button>
+		</div>
+	</div>
+
+
+	<div class="has-background-alternating-grey">
+		<div class="modular-content-container">
+			<div class="section is-small is-uniform">
+				<h2 class="title is-2 has-margin-top-large">
+					Course outline
+				</h2>
+				<div class="content">
+					<h3 id="module-1-introduction-to-windows-10">Module 1: Introduction to Windows 10</h3>
+<p>Windows 10 is the latest version of the Windows client operating system. It includes the same core functionality as Windows 8.1, as well as several important enhancements and functionality improvements that impact the enterprise environment, especially around security. The Windows 10 design meets a wide range of computing needs, and enable users to perform tasks efficiently. This module introduces you to the key new features of Windows 10.</p>
+<h4 id="lessons">Lessons</h4>
+<ul>
+<li>New Features of Windows 10</li>
+<li>Windows 10 Features not Available with the Initial Release</li>
+<li>Exploring the new User Interface (UI) of Windows 10</li>
+<li>Windows 10 Desktop and Tablet Editions</li>
+<li>Windows 10 Hardware Requirements</li>
+</ul>
+<p>After completing this lesson, you will be able to:</p>
+<ul>
+<li>List and explain the new features of Windows 10.</li>
+<li>List those features that are available now and in what version.</li>
+<li>Use the new user interface in Windows 10.</li>
+<li>List and describe the devices that can run Windows 10.</li>
+<li>List Windows 10 hardware requirements.</li>
+<li>Explain the various Windows 10 editions</li>
+</ul>
+<h3 id="module-2-deployment-and-management-of-windows-10">Module 2: Deployment and Management of Windows 10</h3>
+<p>Assessing an enterprise’s deployment requirements begins with understanding its hardware and infrastructure environment, and determining whether that hardware can support Windows 10, and the features of Windows 10 deemed important for the enterprise. Moving to Windows 10 in most cases will be very straight forward and require minimal updates to an enterprises’ existing deployment process, though they will now have more options. The recommended strategy is to deploy Windows 10 as the base platform, then through Windows as a service, new features will be delivered. Moving to Windows 10 as mentioned earlier, will not be as expensive or time consuming as an upgrade from Windows XP to Windows 7. In most cases, hardware and software will be compatible with Windows 10.  In this module we will look at the capabilities of  management and deployment tools to address this evolution.</p>
+<h4 id="lessons-1">Lessons</h4>
+<ul>
+<li>Deployment of Windows 10</li>
+<li>Provisioning for Windows 10</li>
+<li>Managing Windows 10</li>
+<li>Supporting Windows 10</li>
+</ul>
+<p>After completing this module, you will be able to:</p>
+<ul>
+<li>Describe the preparations required for deploying and managing Windows 10</li>
+<li>Understand the Deployment Choices</li>
+<li>Understand the Management Options</li>
+</ul>
+<h3 id="module-3-security-features-of-windows-10">Module 3: Security Features of Windows 10</h3>
+<p>Windows 10 is designed to protect you from modern security threats and we’ve organized our efforts around the following pillars: secure device/hardware, secure identities, information protection, and threat resistance.</p>
+<p>In this module we will look at an overview of Windows 10 security features, and then take a deep dive into facets of Device Guard.</p>
+<h4 id="lessons-2">Lessons</h4>
+<ul>
+<li>Windows 10 Security Overview</li>
+<li>Overview of Device Guard</li>
+<li>Configurable code integrity</li>
+<li>Planning for Device Guard</li>
+<li>Device Guard Catalog files</li>
+<li>Using Device Guard</li>
+</ul>
+<p>After completing this module, you will be able to:</p>
+<ul>
+<li>Understand the overall security features of Windows 10</li>
+<li>Understand the features of Device Guard</li>
+</ul>

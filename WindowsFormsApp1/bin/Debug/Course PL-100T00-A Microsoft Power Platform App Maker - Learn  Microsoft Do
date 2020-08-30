@@ -1,0 +1,275 @@
+<title>Course PL-100T00-A: Microsoft Power Platform App Maker - Learn | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/styles/ef3a64fe.site-ltr.css ">
+
+	
+
+
+	<script>
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Course',
+			brand: '',
+			context: {
+
+			},
+			hasBinaryRating: false,
+			hasGithubIssues: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'None',
+			feedbackGitHubRepo: '',
+			feedbackProductUrl: '',
+			contentGitUrl: 'https://github.com/MicrosoftDocs/learn-certs-pr/blob/live/learn-certs-pr/courses/pl-100t00.yml',
+			extendBreadcrumb: true,
+			isEditDisplayable: false,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasBookmark: true,
+			hasShare: false
+		},
+		functions:{}
+	};
+	</script>
+	<script nomodule src="/static/third-party/bluebird/3.5.0/bluebird.min.js" integrity="sha384-aD4BDeDGeLXLpPK4yKeqtZQa9dv4a/7mQ+4L5vwshIYH1Mc2BrXvHd32iHzYCQy5" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/fetch/3.0.0/fetch.umd.min.js" integrity="sha384-EQIXrC5K2+7X8nGgLkB995I0/6jfAvvyG1ieZ+WYGxgJHFMD/alsG9fSDWvzb5Y1" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/template/1.4.0/template.min.js" integrity="sha384-1zKzI6ldTVHMU7n0W2HpE/lhHI+UG4D9IIaxbj3kT2UhCWicdTuJkTtnKuu0CQzN" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/url/0.5.7/url.min.js" integrity="sha384-vn7xBMtpSTfzaTRWxj0kVq0UcsbBrTOgZ/M1ISHqe1V358elYva+lfiEC+T8jLPc" crossorigin="anonymous"></script>
+	<script src="/_themes/docs.theme/master/en-us/_themes/scripts/7501e2bd.index-polyfills.js"></script>
+		<script src="/_themes/docs.theme/master/en-us/_themes/scripts/74e2026a.index-docs.js"></script>
+</head>
+
+<body lang="en-us" dir="ltr">
+<div class="header-holder has-default-focus">
+	<a href="#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused is-fixed has-inner-focus focus-visible has-top-zero has-left-zero has-right-zero has-padding-medium has-text-centered has-body-background-medium" tabindex="1">Skip to main content</a>
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+	<div class="nav-bar">
+		<div class="nav-bar-brand">
+			<a itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" class="nav-bar-button">
+				<div class="nav-bar-logo has-background-image theme-display is-light" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+				<div class="nav-bar-logo has-background-image theme-display is-dark is-high-contrast" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+			</a>
+		</div>
+	</div>
+	<div class="nav-bar has-border-top is-hidden-mobile">
+	</div>
+</header>		</div>
+
+				<div class="content-header uhf-container has-padding has-default-focus has-border-bottom-none" data-bi-name="content-header">
+				<nav class="has-padding-none has-padding-left-medium-tablet has-padding-right-medium-tablet has-padding-left-none-uhf-tablet has-padding-left-none-uhf-tablet has-padding-none-desktop has-flex-grow" data-bi-name="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="Breadcrumb">
+					<ul id="page-breadcrumbs" class="breadcrumbs">
+					</ul>
+				</nav>
+			<div class="content-header-controls">
+				<button type="button" class="contents-button button" data-bi-name="contents-expand" aria-haspopup="true">
+					<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+					<span class="contents-expand-title">Contents</span>
+				</button>
+				<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse" aria-controls="action-panel">
+					<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+					<span>Exit focus mode</span>
+				</button>
+			</div>
+			<div class="has-padding-none-tablet has-padding-medium is-size-small is-flex-touch has-flex-justify-content-space-between-touch has-flex-grow">
+				<ul class="is-hidden-mobile action-list has-flex-justify-content-start has-flex-justify-content-end-tablet is-flex is-flex-row has-flex-wrap has-flex-grow is-unstyled">
+					<li>
+						<button type="button" class="bookmark button is-text has-inner-focus is-small is-icon-only-touch" data-list-type="bookmarks" data-bi-name="bookmark" title="Bookmark this page">
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-single-bookmark"></span>
+							</span>
+							<span class="bookmark-status is-visually-hidden-touch is-hidden-portrait">Bookmark</span>
+						</button>
+					</li>
+				</ul>
+				<button type="button" class="has-border contents-button button is-small is-text is-hidden-tablet has-inner-focus" aria-label="Contents" data-bi-name="contents-expand">
+					<span class="icon">
+						<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+					</span>
+					<span class="contents-expand-title">Table of contents</span>
+				</button>
+				<div class="is-invisible"></div>
+				<div class="is-hidden-tablet level-item is-flexible level-right">
+					<button type="button" class="page-actions-button button is-small is-text is-hidden-tablet has-inner-focus has-border is-full-height  has-margin-left-small" aria-label="Page Actions" data-bi-name="pageactions">
+						<span class="icon">
+							<span class="docon docon-more-vertical" aria-hidden="true"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+
+
+	<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus"></div>
+	</div>
+
+	<div class="mainContainer  uhf-container is-full  has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile  is-gapless">
+
+
+			<section class="primary-holder column ">
+				<div class="columns is-gapless-mobile has-large-gaps  is-gapless">
+
+
+				<div id="main-column" class="column ">
+
+					<main id="main" role="main" class="" data-bi-name="content" lang="en-us" dir="ltr">
+
+
+
+						
+
+
+						<!-- <content> -->
+							<div class="modular-content-container">
+	<div class="section is-small is-uniform has-padding-top-none is-relative-mobile has-padding-bottom-medium">
+		<div class="columns has-large-gaps has-margin-top-medium">
+				<div class="column is-2 has-padding-medium has-padding-bottom-none has-padding-top-none has-padding-bottom-medium-tablet has-padding-top-medium-tablet">
+					<figure class="image is-128x128-desktop is-112x112-tablet is-96x96 has-margin-none">
+						<img class="has-padding-left-none has-margin-left-none" role="presentation" src="/en-us/media/learn/certification/course.svg" alt="" data-linktype="absolute-path">
+					</figure>
+				</div>
+
+			<div class="column is-relative-tablet has-padding-top-none has-padding-top-large-tablet">
+				<div class="columns is-mobile is-gapless has-margin-bottom-none">
+					<div class="column is-auto heading-container">
+						<h1 class="has-line-height-reset title is-1">
+							Course PL-100T00-A: Microsoft Power Platform App Maker
+						</h1>
+						<ul class="metadata page-metadata">
+							<li>3 Days</li>
+							<li>Instructor-led training</li>
+							<li>Beginner</li>
+							<li>English</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="has-margin-top-medium summary is-size-body content"><p>This course will teach you how to build apps with low-code techniques to simplify, automate, and transform business tasks and processes using Microsoft Power Platform.</p>
+<h4 id="audience-profile">Audience profile</h4>
+<p>The App Maker builds solutions to simplify, automate, and transform tasks and processes for themselves and their team where they have deep expertise in the solution business domain. They have basic data modeling, user experience design, requirements analysis, and process analysis skills. The App Maker creates and enforces business processes, structures digital collection of information, improves efficiency of repeatable tasks, and automates business processes. The App Maker uses the Maker tools of Power Platform to solve business problems. They may use advanced features of Microsoft apps and third-party productivity tools. The App Maker is aware of the capabilities and limitations of available tools and understands how to apply them. The App Maker is self-directed, and solution focused. They may not have formal IT training but are comfortable using technology to solve business problems with a personal growth mindset. They understand the operational need and have a vision of the desired outcome. They approach problems with phased and iterative strategies.</p>
+</div>
+				<div class="has-line-height-reset course-information has-margin-top-medium">
+					<div>
+						<p class="is-size-small"><strong>Job role:</strong>
+								<span>Developer</span>
+						</p>
+					</div>
+						<div class="related-exams">
+							<p class="is-size-small"><strong>Preparation for exam:</strong>
+								<span>
+										  <a class="is-undecorated" href="../exams/pl-100" data-linktype="relative-path">PL-100</a>
+								</span>
+							</p>
+						</div>
+
+					<div class="related-exams">
+						<p class="is-size-small">
+							<strong>Features:</strong>
+							<span>none</span>
+						</p>
+					</div>
+
+					<div id="findALearningPartnerContainer" class="has-margin-top-medium">
+						<a href="https://www.microsoft.com/learning/partners.aspx" class="button is-primary" data-linktype="external">
+							<span>Find a learning partner</span>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-chevron-right-light"></span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="browseAllSessionsContainer" class="has-background-alternating-grey" hidden>
+	<div class="modular-content-container">
+		<div class="section is-small is-uniform">
+			<h2 class="has-margin-bottom-extra-small">
+				Browse All Sessions
+			</h2>
+			<div id="browseAllSessionsContent" class="content">
+
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div id="skillsGainedContainer" class="modular-content-container">
+		<div class="section is-small is-uniform has-padding-top-medium has-body-background-mobile">
+			<h3 class="title is-5">
+				Skills gained
+			</h3>
+			<div class="content has-line-height-reset">
+				<ul id="skills-gained">
+						<li class=" is-size-small">
+							Design apps and automate workflows
+						</li>
+						<li class=" is-size-small">
+							Create apps and automate workflows
+						</li>
+						<li class=" is-size-small">
+							Analyze and visualize data in context of an app or automated workflow
+						</li>
+						<li class=" is-size-small">
+							Implement and manage apps and automated workflows
+						</li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="has-background-alternating-grey">
+		<div class="modular-content-container">
+			<div class="section is-small is-uniform">
+				<h2 class="title is-3 has-margin-top-large">
+					Prerequisites
+				</h2>
+				<div class="content">
+					<ul>
+<li>Basic data modeling, user experience design, requirements analysis, and process analysis skills.</li>
+<li>A personal growth mindset and are comfortable using technology to solve business problems.</li>
+<li>An understanding of the operational need and have a vision of the desired outcome. They approach problems with phased and iterative strategies.</li>
+</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="has-background-alternating-grey">
+		<div class="modular-content-container">
+			<div class="section is-small is-uniform">
+				<h2 class="title is-2 has-margin-top-large">
+					Course outline
+				</h2>
+				<div class="content">
+					<h3 id="module-1-create-a-model-driven-application-in-power-apps">Module 1: Create a model-driven application in Power Apps</h3>
+<p>This module introduces you to creating a model-driven app in Power Apps that uses Common Data Service.</p>
+<h3 id="module-2-create-a-canvas-app-in-power-apps">Module 2: Create a canvas app in Power Apps</h3>
+<p>This module introduces you to Power Apps, helps you create and customize an app, and then manage and distribute it.</p>
+<h3 id="module-3-use-the-ui-and-controls-in-a-canvas-app-in-power-apps">Module 3: Use the UI and controls in a canvas app in Power Apps</h3>
+<p>This module will focus on how to provide the best app navigation, and build the best UI using themes, icons, images, personalization, different form factors, and controls.</p>
+<h3 id="module-4-automate-a-business-process-using-power-automate">Module 4: Automate a business process using Power Automate</h3>
+<p>This module introduces you to Power Automate, teaches you how to build workflows, and how to administer flows.</p>
+<h3 id="module-5-create-and-use-analytics-reports-with-power-bi">Module 5: Create and use analytics reports with Power BI</h3>
+<p>Learn what Power BI is, including its building blocks and how they work together.</p>
+<h3 id="module-6-get-started-with-ai-builder">Module 6: Get started with AI Builder</h3>
+<p>This module helps you build an AI model from the beginning and shows how you can use it in your business without writing a single line of code.</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+

@@ -1,0 +1,352 @@
+<title>Course MB-600T00-A: Microsoft Dynamics 365 + Power Platform Solution Architect - Learn | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/styles/ef3a64fe.site-ltr.css ">
+
+	
+
+
+	<script>
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Course',
+			brand: '',
+			context: {
+
+			},
+			hasBinaryRating: false,
+			hasGithubIssues: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'None',
+			feedbackGitHubRepo: '',
+			feedbackProductUrl: '',
+			contentGitUrl: 'https://github.com/MicrosoftDocs/learn-certs-pr/blob/live/learn-certs-pr/courses/mb-600t00.yml',
+			extendBreadcrumb: true,
+			isEditDisplayable: false,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasBookmark: true,
+			hasShare: false
+		},
+		functions:{}
+	};
+	</script>
+	<script nomodule src="/static/third-party/bluebird/3.5.0/bluebird.min.js" integrity="sha384-aD4BDeDGeLXLpPK4yKeqtZQa9dv4a/7mQ+4L5vwshIYH1Mc2BrXvHd32iHzYCQy5" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/fetch/3.0.0/fetch.umd.min.js" integrity="sha384-EQIXrC5K2+7X8nGgLkB995I0/6jfAvvyG1ieZ+WYGxgJHFMD/alsG9fSDWvzb5Y1" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/template/1.4.0/template.min.js" integrity="sha384-1zKzI6ldTVHMU7n0W2HpE/lhHI+UG4D9IIaxbj3kT2UhCWicdTuJkTtnKuu0CQzN" crossorigin="anonymous"></script>
+	<script nomodule src="/static/third-party/url/0.5.7/url.min.js" integrity="sha384-vn7xBMtpSTfzaTRWxj0kVq0UcsbBrTOgZ/M1ISHqe1V358elYva+lfiEC+T8jLPc" crossorigin="anonymous"></script>
+	<script src="/_themes/docs.theme/master/en-us/_themes/scripts/7501e2bd.index-polyfills.js"></script>
+		<script src="/_themes/docs.theme/master/en-us/_themes/scripts/74e2026a.index-docs.js"></script>
+</head>
+
+<body lang="en-us" dir="ltr">
+<div class="header-holder has-default-focus">
+	<a href="#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused is-fixed has-inner-focus focus-visible has-top-zero has-left-zero has-right-zero has-padding-medium has-text-centered has-body-background-medium" tabindex="1">Skip to main content</a>
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+	<div class="nav-bar">
+		<div class="nav-bar-brand">
+			<a itemprop="url" href="https://www.microsoft.com" aria-label="Microsoft" class="nav-bar-button">
+				<div class="nav-bar-logo has-background-image theme-display is-light" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+				<div class="nav-bar-logo has-background-image theme-display is-dark is-high-contrast" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope"></div>
+			</a>
+		</div>
+	</div>
+	<div class="nav-bar has-border-top is-hidden-mobile">
+	</div>
+</header>		</div>
+
+				<div class="content-header uhf-container has-padding has-default-focus has-border-bottom-none" data-bi-name="content-header">
+				<nav class="has-padding-none has-padding-left-medium-tablet has-padding-right-medium-tablet has-padding-left-none-uhf-tablet has-padding-left-none-uhf-tablet has-padding-none-desktop has-flex-grow" data-bi-name="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="Breadcrumb">
+					<ul id="page-breadcrumbs" class="breadcrumbs">
+					</ul>
+				</nav>
+			<div class="content-header-controls">
+				<button type="button" class="contents-button button" data-bi-name="contents-expand" aria-haspopup="true">
+					<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+					<span class="contents-expand-title">Contents</span>
+				</button>
+				<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse" aria-controls="action-panel">
+					<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+					<span>Exit focus mode</span>
+				</button>
+			</div>
+			<div class="has-padding-none-tablet has-padding-medium is-size-small is-flex-touch has-flex-justify-content-space-between-touch has-flex-grow">
+				<ul class="is-hidden-mobile action-list has-flex-justify-content-start has-flex-justify-content-end-tablet is-flex is-flex-row has-flex-wrap has-flex-grow is-unstyled">
+					<li>
+						<button type="button" class="bookmark button is-text has-inner-focus is-small is-icon-only-touch" data-list-type="bookmarks" data-bi-name="bookmark" title="Bookmark this page">
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-single-bookmark"></span>
+							</span>
+							<span class="bookmark-status is-visually-hidden-touch is-hidden-portrait">Bookmark</span>
+						</button>
+					</li>
+				</ul>
+				<button type="button" class="has-border contents-button button is-small is-text is-hidden-tablet has-inner-focus" aria-label="Contents" data-bi-name="contents-expand">
+					<span class="icon">
+						<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+					</span>
+					<span class="contents-expand-title">Table of contents</span>
+				</button>
+				<div class="is-invisible"></div>
+				<div class="is-hidden-tablet level-item is-flexible level-right">
+					<button type="button" class="page-actions-button button is-small is-text is-hidden-tablet has-inner-focus has-border is-full-height  has-margin-left-small" aria-label="Page Actions" data-bi-name="pageactions">
+						<span class="icon">
+							<span class="docon docon-more-vertical" aria-hidden="true"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+
+
+	<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus"></div>
+	</div>
+
+	<div class="mainContainer  uhf-container is-full  has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile  is-gapless">
+
+
+			<section class="primary-holder column ">
+				<div class="columns is-gapless-mobile has-large-gaps  is-gapless">
+
+
+				<div id="main-column" class="column ">
+
+					<main id="main" role="main" class="" data-bi-name="content" lang="en-us" dir="ltr">
+
+
+
+						
+
+
+						<!-- <content> -->
+							<div class="modular-content-container">
+	<div class="section is-small is-uniform has-padding-top-none is-relative-mobile has-padding-bottom-medium">
+		<div class="columns has-large-gaps has-margin-top-medium">
+				<div class="column is-2 has-padding-medium has-padding-bottom-none has-padding-top-none has-padding-bottom-medium-tablet has-padding-top-medium-tablet">
+					<figure class="image is-128x128-desktop is-112x112-tablet is-96x96 has-margin-none">
+						<img class="has-padding-left-none has-margin-left-none" role="presentation" src="/en-us/media/learn/certification/course.svg" alt="" data-linktype="absolute-path">
+					</figure>
+				</div>
+
+			<div class="column is-relative-tablet has-padding-top-none has-padding-top-large-tablet">
+				<div class="columns is-mobile is-gapless has-margin-bottom-none">
+					<div class="column is-auto heading-container">
+						<h1 class="has-line-height-reset title is-1">
+							Course MB-600T00-A: Microsoft Dynamics 365 + Power Platform Solution Architect
+						</h1>
+						<ul class="metadata page-metadata">
+							<li>3 Days</li>
+							<li>Instructor-led training</li>
+							<li>Advanced</li>
+							<li>English</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="has-margin-top-medium summary is-size-body content"><p>The Solution Architect is responsible for the successful design, implementation, deployment and adoption of an overall solution. The Solution Architect ensures that the solution meets the customerâ€™s needs now and in the future. In this course, students will learn about decisions a Solution Architect makes during an implementation, covering security, integrations, Power Apps architecture, Power Automate architecture, and more. This course is designed to give you an introduction to the Solution Architect role.</p>
+<h4 id="audience-profile">Audience profile</h4>
+<p>Senior Consultants (both functional and technical) that aspire to be Solution Architects, or current Solution Architects that are new to the role.</p>
+</div>
+				<div class="has-line-height-reset course-information has-margin-top-medium">
+					<div>
+						<p class="is-size-small"><strong>Job role:</strong>
+								<span>Solutions Architect</span>
+						</p>
+					</div>
+						<div class="related-exams">
+							<p class="is-size-small"><strong>Preparation for exam:</strong>
+								<span>
+										  <a class="is-undecorated" href="../exams/mb-600" data-linktype="relative-path">MB-600</a>
+								</span>
+							</p>
+						</div>
+
+					<div class="related-exams">
+						<p class="is-size-small">
+							<strong>Features:</strong>
+							<span>none</span>
+						</p>
+					</div>
+
+					<div id="findALearningPartnerContainer" class="has-margin-top-medium">
+						<a href="https://www.microsoft.com/learning/partners.aspx" class="button is-primary" data-linktype="external">
+							<span>Find a learning partner</span>
+							<span class="icon" aria-hidden="true">
+								<span class="docon docon-chevron-right-light"></span>
+							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="browseAllSessionsContainer" class="has-background-alternating-grey" hidden>
+	<div class="modular-content-container">
+		<div class="section is-small is-uniform">
+			<h2 class="has-margin-bottom-extra-small">
+				Browse All Sessions
+			</h2>
+			<div id="browseAllSessionsContent" class="content">
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	<div class="has-background-alternating-grey">
+		<div class="modular-content-container">
+			<div class="section is-small is-uniform">
+				<h2 class="title is-3 has-margin-top-large">
+					Prerequisites
+				</h2>
+				<div class="content">
+					<p>Before attending this course, students must have:</p>
+<ul>
+<li>Passed MB-200 Exam</li>
+<li>Experience with Dynamics 365 and the Power Platform</li>
+<li>Senior Consultant (functional or technical) or Solution Architect new to role</li>
+<li>Some knowledge of Microsoft Azure</li>
+</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="has-background-alternating-grey">
+		<div class="modular-content-container">
+			<div class="section is-small is-uniform">
+				<h2 class="title is-2 has-margin-top-large">
+					Course outline
+				</h2>
+				<div class="content">
+					<h3 id="module-1-becoming-a-solution-architectgetting-to-know-your-customer">Module 1: Becoming a Solution Architect/Getting to know your customer</h3>
+<h4 id="lessons">Lessons</h4>
+<ul>
+<li>Define a Solution Architect</li>
+<li>Role of a Solution Architect on projects</li>
+<li>Project Methodology</li>
+<li>Getting to know your customer</li>
+<li>Group exercise - Getting to know your customer</li>
+</ul>
+<h3 id="module-2-conceptualizing-the-design-from-requirements">Module 2: Conceptualizing the design from requirements</h3>
+<h4 id="lessons-1">Lessons</h4>
+<ul>
+<li>How to lead the requirement collection effort</li>
+<li>Using fit gap analysis</li>
+<li>Pillars of good architecture</li>
+<li>Blueprinting the solution architecture</li>
+<li>Group exercise - Design from requirements</li>
+</ul>
+<h3 id="module-3-project-governance-and-working-as-a-team">Module 3: Project governance and working as a team</h3>
+<h4 id="lessons-2">Lessons</h4>
+<ul>
+<li>Solution Architect's role in project governance</li>
+<li>Techniques for keeping a project on track</li>
+<li>Scenarios that could cause a project to fail</li>
+<li>Group exercise - Project governance and working as a team</li>
+</ul>
+<h3 id="module-4-power-platform-architecture">Module 4: Power Platform Architecture</h3>
+<h4 id="lessons-3">Lessons</h4>
+<ul>
+<li>Key Power Platform architecture components</li>
+<li>Understand how platform design and limits influence solution architectures</li>
+<li>Updates and feature releases</li>
+<li>Understand how to communicate how the platform meets customer needs</li>
+</ul>
+<h3 id="module-5-data-modeling">Module 5: Data Modeling</h3>
+<h4 id="lessons-4">Lessons</h4>
+<ul>
+<li>Data model influences</li>
+<li>Data model strategy</li>
+<li>Data types</li>
+<li>Data relationships</li>
+<li>Group exercise - Data modeling</li>
+</ul>
+<h3 id="module-6-analytics-and-artificial-intelligence">Module 6: Analytics and artificial intelligence</h3>
+<h4 id="lessons-5">Lessons</h4>
+<ul>
+<li>Planning and evaluating requirements</li>
+<li>Operational reporting</li>
+<li>Power BI</li>
+<li>Enterprise BI</li>
+<li>Pre-built insights and custom AI</li>
+</ul>
+<h3 id="module-7-power-apps-architecture">Module 7: Power Apps Architecture</h3>
+<h4 id="lessons-6">Lessons</h4>
+<ul>
+<li>Discuss options for apps and how to choose where to start</li>
+<li>Discuss app composition options</li>
+<li>Using components as part of your app architecture</li>
+<li>Considerations for including Portals as an app in your architecture</li>
+<li>Group exercise - Power Apps Architecture topics</li>
+</ul>
+<h3 id="module-8-application-lifecycle-management-alm">Module 8: Application Lifecycle Management (ALM)</h3>
+<h4 id="lessons-7">Lessons</h4>
+<ul>
+<li>Microsoft vision and Solution Architect's role in ALM</li>
+<li>Environment strategies</li>
+<li>Defning a solution structure for your deliverable</li>
+</ul>
+<h4 id="lab--alm-hands-on-lab">Lab : ALM Hands-on Lab</h4>
+<h3 id="module-9-power-automate-architecture">Module 9: Power Automate Architecture</h3>
+<h4 id="lessons-8">Lessons</h4>
+<ul>
+<li>Discuss options for automation and custom logic</li>
+<li>Review considerations for using triggers and common actions</li>
+<li>Explore using Business Process Flows (BPF) to guide users through business processes</li>
+<li>Group Exercise - Evaluate scenarios for Power Automate usage</li>
+</ul>
+<h3 id="module-10-security-modeling">Module 10: Security Modeling</h3>
+<h4 id="lessons-9">Lessons</h4>
+<ul>
+<li>Solution Architect's role in security modeling</li>
+<li>Discovery and learning your client's environment</li>
+<li>Controlling access to environments and resources</li>
+<li>Controlling access to CDS Data</li>
+<li>Group Exercise - Security Modeling</li>
+</ul>
+<h3 id="module-11-integration">Module 11: Integration</h3>
+<h4 id="lessons-10">Lessons</h4>
+<ul>
+<li>Solution Architects role in Integrations</li>
+<li>What is an integration and why do we need it</li>
+<li>Platform features that enable integration</li>
+<li>CDS Event Publishing</li>
+<li>Scenarios for group discussion</li>
+</ul>
+<h3 id="module-12-dynamics-365-applications-architecture">Module 12: Dynamics 365 Applications Architecture</h3>
+<h4 id="lessons-11">Lessons</h4>
+<ul>
+<li>Solution Architect's role when deploying Dynamics 365 apps</li>
+<li>Architecture Considerations for primary apps</li>
+<li>Group Exercise - App specific working groups evaluate requirements</li>
+</ul>
+<h3 id="module-13-testing-and-go-live">Module 13: Testing and Go Live</h3>
+<h4 id="lessons-12">Lessons</h4>
+<ul>
+<li>Solution Architect's role with testing and go live</li>
+<li>Planning for testing</li>
+<li>Planning for go live</li>
+</ul>
+<h4 id="additional-reading">Additional Reading</h4>
+<p><a href="/en-us/learn/paths/become-solution-architect/" data-linktype="absolute-path">https://docs.microsoft.com/en-us/learn/paths/become-solution-architect/</a></p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
