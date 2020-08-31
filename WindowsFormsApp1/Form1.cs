@@ -11,6 +11,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        ExcelFileGenerator excelFileGenerator = new ExcelFileGenerator();
         List<String> hrefslist = new List<String>();
         public Form1()
         {
@@ -51,7 +52,10 @@ namespace WindowsFormsApp1
                 {
                     var md = converter.Convert(editedHtmlContent);
                     md = StripHTML(md);
-                    Console.WriteLine(filename + " " + i);
+                    var b = md.IndexOf("English\n");
+                    var a =md.IndexOf("Job role:");
+                    md = md.Substring(b, a - b);
+                    md = md.Replace("####", "#").Replace("English", "# About this course");
                     CreateFile(md, filename);
                 }
                 catch (Exception ex)
@@ -164,6 +168,11 @@ namespace WindowsFormsApp1
             CreateUrlFile("urls.txt");
             MessageBox.Show("Finished");
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
