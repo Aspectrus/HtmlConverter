@@ -9,10 +9,17 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
+  
+
     public partial class Form1 : Form
     {
+
+
+
         ExcelFileGenerator excelFileGenerator = new ExcelFileGenerator();
-        List<String> hrefslist = new List<String>();
+        HashSet<string> hrefslist  = new HashSet<string>();
+        IDictionary<String, String> prodDictionary = new Dictionary<string, string>();
+     
         public Form1()
         {
             InitializeComponent();
@@ -21,8 +28,8 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
           string[] lines = System.IO.File.ReadAllLines(@"urls.txt");
-            int i = 0;
-        foreach(string  url in lines)
+          int a = 0, b = 0;
+          foreach (string  url in lines)
             {
                 WebClient client = new WebClient();
                 string htmlContent = client.DownloadString(url);
@@ -30,40 +37,58 @@ namespace WindowsFormsApp1
                 string editedHtmlContent = "";
                 try
                 {
+
                     var contentStartIndex = htmlContent.IndexOf("<!-- <content> -->");
                     editedHtmlContent = htmlContent.Substring(contentStartIndex, htmlContent.IndexOf("<!-- </content> -->") - contentStartIndex);
                     editedHtmlContent = editedHtmlContent.Substring("<!-- <content> -->".Length);
+                    if (!editedHtmlContent.Contains("<li>English</li>")) continue;
                     if (editedHtmlContent.Contains("Chinese (Simplified)")) continue;
                     if (editedHtmlContent.Contains("Chinese (Traditional)")) continue;
-                    if (editedHtmlContent.Contains("Japanese, English")) continue;
+                    if (editedHtmlContent.Contains("Japanese, English</li>")) continue;
+                    if (editedHtmlContent.Contains("German, English</li>")) continue;
+                    if (editedHtmlContent.Contains("French, English</li>")) continue;
+                    if (editedHtmlContent.Contains("Course retirement date:")) continue;
+                    if (editedHtmlContent.Contains("Portuguese(Brazil), English")) continue;
+                    if (editedHtmlContent.Contains("Spanish, English</li>>")) continue;
+                 
+
 
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex);
                 }
-                string filename = RemoveIllegalChars(title);
+                string filename = RemoveIllegalChars(title)+".md";
 
 
+
+                excelFileGenerator.CreateCourseListInfoFromHtml(editedHtmlContent, title,filename,url, prodDictionary);
                 var converter = new Html2Markdown.Converter();
 
+
                 
+
                 try
                 {
                     var md = converter.Convert(editedHtmlContent);
-                    md = StripHTML(md);
-                    var b = md.IndexOf("English\n");
-                    var a =md.IndexOf("Job role:");
+                    b = md.IndexOf("English");
+                    a =md.IndexOf("Job role:");
                     md = md.Substring(b, a - b);
                     md = md.Replace("####", "#").Replace("English", "# About this course");
+                    md = StripHTML(md);
+                    md = md.Substring(0, md.Length - 2);
                     CreateFile(md, filename);
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex);
+                    Console.WriteLine(b);
+                    Console.WriteLine(a);
+
+                    Console.WriteLine(filename);
+
                 }
-                i++;
             }
+            excelFileGenerator.dosmth();
 
             MessageBox.Show("Finished");
 
@@ -71,7 +96,7 @@ namespace WindowsFormsApp1
 
         private void CreateFile(string text, string filename)
         {
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter($"{filename}.md"))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter($"{filename}"))
             {
                 file.WriteLine(text);
             }
@@ -94,7 +119,7 @@ namespace WindowsFormsApp1
         public static string StripHTML(string input)
         {
 
-            input = Regex.Replace(input, "<[^>]*>", String.Empty).Replace("Show more", "").Replace("See all instructor-led courses", "");
+            input = Regex.Replace(input, "<.*?>", String.Empty).Replace("Show more", "").Replace("See all instructor-led courses", "");
             //input = Regex.Replace(input, @"\((.*?)spx\)", String.Empty);
             input = Regex.Replace(input, @"\[[^>]*spx\)|\![^>]*svg\)|\[[^>]*browse/\)", String.Empty);
 
@@ -105,9 +130,10 @@ namespace WindowsFormsApp1
 
         public string TakeCourseTitle(string htmlContent)
         {
-            var titleStartIndex = htmlContent.IndexOf("<title>");
+            var titleStartIndex = htmlContent.IndexOf("<title>") ;
             string title = htmlContent.Substring(titleStartIndex, htmlContent.IndexOf("</title>") - titleStartIndex);
-            return title.Substring("<title>".Length, title.Length - " -Learn | Microsoft Docs".Length - "<title>".Length);
+
+            return title.Substring("<title>".Length + "Course ".Length, title.Length - " -Learn | Microsoft Docs".Length - "<title>".Length - "Course ".Length);
         }
 
         public void GetAllHrefs(String uri)
@@ -117,21 +143,62 @@ namespace WindowsFormsApp1
 
             var web = new HtmlWeb();
             web.BrowserTimeout = TimeSpan.FromSeconds(30);
-
+            
             var doc = web.LoadFromBrowser(uri, o =>
             {
-                var webBrowser = (WebBrowser)o;
+               // var webBrowser = (WebBrowser)o;
+                
 
-                // Wait until the list shows up
-                return webBrowser.Document.Body.InnerHtml.Contains("card-content-title");
+                return o.Contains("card-content-title");
+                
             });
 
+            GC.Collect();
             // Show results
-            foreach (var title in doc.DocumentNode.SelectNodes(".//a[@class='card-content-title']"))
+
+            Regex re = new Regex(@">(.*?)<");
+            foreach (var title in doc.DocumentNode.SelectNodes(".//div[@class='card-content']"))
             {
-                hrefslist.Add(title.GetAttributeValue("href", String.Empty));
+                if (title.SelectSingleNode("a[@class='card-content-title']") != null)
+                {
+                    string url = "https://docs.microsoft.com/en-us" + title.SelectSingleNode("a[@class='card-content-title']").GetAttributeValue("href", String.Empty);
+                    hrefslist.Add(url);
+                    if (title.SelectSingleNode("ul[@class='tags']") != null)
+                    {
+                        string result = "";
+                        string a = (title.SelectSingleNode("ul[@class='tags']").InnerText);
+
+
+
+
+                        foreach (Match match in re.Matches(a))
+                        {
+                            if (match.Groups[1].Length != 0)
+                            {
+                                result = match.Groups[1].Value;
+                                break;
+                            }
+                              /*  if(!match.Groups[1].Equals("Advanced") && !match.Groups[1].Equals("Intermediate") && !match.Groups[1].Equals("Beginner") )
+                                    {
+                                    result += match.Groups[1] + ", ";
+                                } */
+
+
+                        }
+                       // if(result.Length>2) result = result.Substring(0, result.Length - 2);
+
+
+
+                        prodDictionary[url] = result;
+
+
+                    }
+
+                }
+
             }
-            Console.ReadLine();
+
+
 
 
         }
@@ -140,7 +207,7 @@ namespace WindowsFormsApp1
         {
             TextWriter tw = new StreamWriter(filename);
             foreach (String href in hrefslist)
-                tw.WriteLine("https://docs.microsoft.com/en-us" + href);
+                tw.WriteLine(href);
 
             tw.Close();
         }
@@ -158,6 +225,8 @@ namespace WindowsFormsApp1
 
                     linkSkip += 30;
 
+     
+
                 }
                 catch (Exception)
                 {
@@ -170,9 +239,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            
-        }
+
     }
 }
