@@ -85,7 +85,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                duration = (value * 24).ToString();
+                duration = (value * 8).ToString();
 
             }
             editedHtmlContent = editedHtmlContent.Substring(0,editedHtmlContent.IndexOf("<div class=\"related-exams\">"));
@@ -99,7 +99,6 @@ namespace WindowsFormsApp1
 
             CourseListInfo courseListInfo = new CourseListInfo();
             courseListInfo.title = title;
-            courseListInfo.description = "";
             courseListInfo.durationHours = duration;
             courseListInfo.productClassifier = prodClassifier;
             courseListInfo.jobRoleClassifier = jobRole;

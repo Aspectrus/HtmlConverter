@@ -27,7 +27,9 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-          string[] lines = System.IO.File.ReadAllLines(@"urls.txt");
+            UrlGeneration();
+
+            string[] lines = System.IO.File.ReadAllLines(@"urls.txt");
           int a = 0, b = 0;
           foreach (string  url in lines)
             {
@@ -58,8 +60,7 @@ namespace WindowsFormsApp1
                 {
                     Console.WriteLine(ex);
                 }
-                string filename = RemoveIllegalChars(title)+".md";
-
+                string filename = RemoveIllegalChars(title) + ".md";
 
 
                 excelFileGenerator.CreateCourseListInfoFromHtml(editedHtmlContent, title,filename,url, prodDictionary);
@@ -90,13 +91,17 @@ namespace WindowsFormsApp1
             }
             excelFileGenerator.dosmth();
 
-            MessageBox.Show("Finished");
+            MessageBox.Show("All Finished");
+
+
 
         }
 
         private void CreateFile(string text, string filename)
         {
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter($"{filename}"))
+            DirectoryInfo di = Directory.CreateDirectory("mdcoursesfiles");
+
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter($"mdcoursesfiles/{filename}"))
             {
                 file.WriteLine(text);
             }
@@ -112,7 +117,7 @@ namespace WindowsFormsApp1
                 filename = filename.Replace(c.ToString(), "");
             }
             filename = filename.Replace("Â", "").Replace("®", "").Replace("Ã", "").Replace("©", "").Replace("â", "").Replace("€", "").Replace("™", "");
-
+            filename = filename.Substring(0, filename.IndexOf(" ")).ToLower();
             return filename;
         }
 
@@ -212,7 +217,7 @@ namespace WindowsFormsApp1
             tw.Close();
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void UrlGeneration()
         {
             bool pagesNotEmpty = true;
             var linkSkip = 0;
@@ -235,7 +240,7 @@ namespace WindowsFormsApp1
 
             }
             CreateUrlFile("urls.txt");
-            MessageBox.Show("Finished");
+            MessageBox.Show("First Step Finished");
 
         }
 
